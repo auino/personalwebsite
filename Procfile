@@ -1,1 +1,1 @@
-web: gunicorn personalwebsite.wsgi --log-file -
+web: gunicorn personalwebsite.wsgi collectstatic --noinput --log-file -
