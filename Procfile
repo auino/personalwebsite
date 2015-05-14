@@ -1,1 +1,1 @@
-web: gunicorn wsgi.py
+web: gunicorn auinowebsite.wsgi -b 0.0.0.0:$PORT
