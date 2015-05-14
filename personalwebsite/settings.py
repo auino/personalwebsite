@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import os
+
+>>>>>>> b583092b2aeeff17d5a5eb8fd09d654294e05dbb
 # Django settings for personalwebsite project.
 
 DEBUG = True
@@ -49,7 +54,11 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
+<<<<<<< HEAD
 MEDIA_ROOT = ''
+=======
+MEDIA_ROOT = 'media'
+>>>>>>> b583092b2aeeff17d5a5eb8fd09d654294e05dbb
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -60,17 +69,29 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
+<<<<<<< HEAD
 STATIC_ROOT = ''
+=======
+STATIC_ROOT = 'static' # staticfiles
+>>>>>>> b583092b2aeeff17d5a5eb8fd09d654294e05dbb
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
 STATIC_URL = '/static/'
 
+<<<<<<< HEAD
+=======
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+>>>>>>> b583092b2aeeff17d5a5eb8fd09d654294e05dbb
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+<<<<<<< HEAD
+=======
+    os.path.join(BASE_DIR, 'static'),
+>>>>>>> b583092b2aeeff17d5a5eb8fd09d654294e05dbb
 )
 
 # List of finder classes that know how to find static files in
@@ -126,6 +147,10 @@ INSTALLED_APPS = (
     #'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     #'django.contrib.admindocs',
+<<<<<<< HEAD
+=======
+    'gunicorn',
+>>>>>>> b583092b2aeeff17d5a5eb8fd09d654294e05dbb
     'app'
 )
 
