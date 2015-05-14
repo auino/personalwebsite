@@ -1,3 +1,0 @@
-recursive-include testdata *.txt *.html *.xml *.kid *.genshi *.stp *.ico 
-include COPYING
-include README.rst
