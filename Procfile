@@ -1,1 +1,1 @@
-web: gunicorn auinowebsite.wsgi -b 0.0.0.0:$PORT
+web: gunicorn personalwebsite.wsgi -b 0.0.0.0:$PORT
