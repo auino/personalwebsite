@@ -1,1 +1,1 @@
-web: gunicorn --port=$PORT personalwebsite.wsgi --log-file -
+web: gunicorn wsgi.py
