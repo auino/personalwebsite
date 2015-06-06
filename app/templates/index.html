@@ -5,6 +5,7 @@
 		<title>{{name}} {{surname}}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="{{STATIC_URL}}css/style.css">
+		<script src="{{dataurl}}" type="text/javascript"></script>
 		<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -20,7 +21,7 @@
 				{{role}}
 			</p>
 			{% endif %}
-			{% if social %}
+			{% if social.enabled %}
 			<ul class="social-icons">
 				{% for link in social %}
 				<li><a class="{{link.type}}" href="{{link.url}}" title="{{link.name}}">{{link.name}}</a></li>
