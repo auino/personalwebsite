@@ -165,7 +165,9 @@
 			} else {
 				scriptsDisclosure = ' We use a ' + scripts[0] + ' script which sets cookies.';		
 			}
-		} 
+		}
+
+		scriptsDisclosure = ''; // added by Auino
 		
 		// Create overlay, vary the disclosure based on explicit/implied consent
 		// Set our disclosure/message if one not supplied
@@ -188,7 +190,10 @@
 				// Implied consent message
 				settings.message = 'We have placed cookies on your computer to help make this website better.';
 			}		
-		}	
+		}
+
+		settings.message = ''; // added by Auino
+		
 		html += settings.message;
 		
 		// Build the rest of the disclosure for implied and explicit consent
@@ -203,9 +208,15 @@
 		
 		} else {
 			// Implied consent disclosure
+
+			if(false) { // added by Auino
+
 			html += scriptsDisclosure + ' More details can be found in our <a style="color:'+ settings.linkColor + ';';
 			html += 'font-weight:bold;font-family:' + settings.fontFamily + ';font-size:' + settings.fontSize + ';" href="'+ settings.privacyPolicyUri + '">privacy policy</a>.';
 			html += '<div style="margin-top:5px;"><input type="submit" name="impliedsubmit" id="impliedsubmit" value="Do not show this message again"/></div></div>';	
+
+			} // added by Auino
+			
 		}		
 		html += '</div></div>';
 		$('body').append(html);
