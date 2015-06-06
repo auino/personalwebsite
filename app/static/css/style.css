@@ -76,14 +76,15 @@ textarea {
 html {
     font: 12px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-body {
+body { }
+
+.person {
     margin-top: 10%;
 }
 
 .avatar {
     float: left;
     margin: 0 40px 20px 0;
-    margin-left: 10%;
 }
     .avatar img {
         max-width: 200px;
@@ -94,7 +95,6 @@ body {
 .content {
     float: left;
     width: 300px;
-    margin-left:10%;
 }
     .title {
         font-size: 48px;

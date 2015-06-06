@@ -37,12 +37,17 @@
 		}
 		{% endfor %}
 		{% endif %}
+		{% if stats.enabled and stats.showprivacypolicymessage %}
+		.privacypolicy a {
+			color: {{colors.privacypolicylink}};
+		}
+		{% endif %}
 		</style>
 	</head>
 	<body>
 		<div class="animated bounceInDown" xmlns:v="http://rdf.data-vocabulary.org/#" typeof="v:Person">
 			<div class="avatar">
-				<img property="v:photo" src="{{STATIC_URL}}img/avatar.jpg" alt="Avatar of {{name}} {{surname}}"/>
+				<img property="v:photo" src="{{avatar}}" alt="Avatar of {{name}} {{surname}}"/>
 			</div>
 			<div class="content">
 				<h1 class="title" property="v:name">{{name}}<br/>{{surname}}</h1>
