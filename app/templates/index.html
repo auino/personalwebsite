@@ -39,35 +39,37 @@
 		{% endif %}
 		</style>
 	</head>
-	<body class="animated bounceInDown" xmlns:v="http://rdf.data-vocabulary.org/#" typeof="v:Person">
-		<div class="avatar">
-			<img property="v:photo" src="{{STATIC_URL}}img/avatar.jpg" alt="Avatar of {{name}} {{surname}}"/>
-		</div>
-		<div class="content">
-			<h1 class="title" property="v:name">{{name}}<br/>{{surname}}</h1>
-			{% if role %}
-			<p property="v:role">
-				{{role}}
-			</p>
-			{% endif %}
-			{% if social.enabled %}
-			<ul class="social-icons">
-				{% for link in social.data %}
-				<li><a class="social {{link.type}}" href="{{link.url}}" title="{{link.name}}">{{link.name}}</a></li>
-				{% endfor %}
-			</ul>
-			{% endif %}
-			{% if links.enabled %}
-			<p>
-				{{links.title}}<br>
-				{% for link in links.list %}
-				<a href="{{link.url}}">{{link.name}}</a><br>
-				{% endfor %}
-			</p>
-			{% endif %}
-			{% if email.address %}
-			<p>{{email.question}} <a href="mailto:{{email.address}}{% if email.tag %}?subject=[{{email.tag}}]{% endif %}">Email me</a>.</p>
-			{% endif %}
+	<body>
+		<div class="animated bounceInDown" xmlns:v="http://rdf.data-vocabulary.org/#" typeof="v:Person">
+			<div class="avatar">
+				<img property="v:photo" src="{{STATIC_URL}}img/avatar.jpg" alt="Avatar of {{name}} {{surname}}"/>
+			</div>
+			<div class="content">
+				<h1 class="title" property="v:name">{{name}}<br/>{{surname}}</h1>
+				{% if role %}
+				<p property="v:role">
+					{{role}}
+				</p>
+				{% endif %}
+				{% if social.enabled %}
+				<ul class="social-icons">
+					{% for link in social.data %}
+					<li><a class="social {{link.type}}" href="{{link.url}}" title="{{link.name}}">{{link.name}}</a></li>
+					{% endfor %}
+				</ul>
+				{% endif %}
+				{% if links.enabled %}
+				<p>
+					{{links.title}}<br>
+					{% for link in links.list %}
+					<a href="{{link.url}}">{{link.name}}</a><br>
+					{% endfor %}
+				</p>
+				{% endif %}
+				{% if email.address %}
+				<p>{{email.question}} <a href="mailto:{{email.address}}{% if email.tag %}?subject=[{{email.tag}}]{% endif %}">Email me</a>.</p>
+				{% endif %}
+			</div>
 		</div>
 		{% if stats.showprivacypolicymessage %}
 		<div id="privacypolicy">
