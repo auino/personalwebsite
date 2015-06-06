@@ -28,11 +28,6 @@
 		a {
 			color: {{colors.links}}
 		}
-		{% if stats.enabled and stats.showprivacypolicymessage %}
-		#epd input {
-			display:none;
-		}
-		{% endif %}
 		{% if social.enabled %}
 		{% for link in social.data %}
 		.{{link.type}} {

@@ -192,8 +192,6 @@
 			}		
 		}
 
-		settings.message = ''; // added by Auino
-		
 		html += settings.message;
 		
 		// Build the rest of the disclosure for implied and explicit consent
@@ -216,7 +214,7 @@
 			html += '<div style="margin-top:5px;"><input type="submit" name="impliedsubmit" id="impliedsubmit" value="Do not show this message again"/></div></div>';	
 
 			} // added by Auino
-			
+
 		}		
 		html += '</div></div>';
 		$('body').append(html);
