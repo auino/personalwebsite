@@ -37,11 +37,6 @@
 		}
 		{% endfor %}
 		{% endif %}
-		{% if stats.enabled and stats.showprivacypolicymessage %}
-		.privacypolicy a {
-			color: {{colors.privacypolicylink}};
-		}
-		{% endif %}
 		</style>
 	</head>
 	<body>
@@ -77,20 +72,18 @@
 			</div>
 		</div>
 		{% if stats.showprivacypolicymessage %}
-		<div class="privacypolicy">
-			<script type="text/javascript">
-			$(document).ready(function() {
-				$.cookiesDirective({
-					privacyPolicyUri: '{{STATIC_URL}}html/privacypolicy.html',
-					explicitConsent: false,
-					position : 'bottom',
-					cookieScripts: 'Google Analytics', 
-					backgroundColor: '{{colors.text}}',
-					linkColor: '{{colors.links}}'
-				});
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$.cookiesDirective({
+				//privacyPolicyUri: '{{STATIC_URL}}html/privacypolicy.html',
+				explicitConsent: false,
+				position : 'bottom',
+				cookieScripts: 'Google Analytics', 
+				backgroundColor: '{{colors.text}}',
+				linkColor: '{{colors.privacypolicylink}}'
 			});
-			</script>
-		</div>
+		});
+		</script>
 		{% endif %}
 	</body>
 </html>
