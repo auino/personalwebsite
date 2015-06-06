@@ -77,12 +77,13 @@ html {
     font: 12px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 body {
-    margin: 10%;
+    margin-top: 10%;
 }
 
 .avatar {
     float: left;
     margin: 0 40px 20px 0;
+    margin-left: 10%;
 }
     .avatar img {
         max-width: 200px;
@@ -93,6 +94,7 @@ body {
 .content {
     float: left;
     width: 300px;
+    margin-left:10%;
 }
     .title {
         font-size: 48px;
@@ -108,7 +110,6 @@ body {
             margin-right: 10px;
             text-indent: -9999px;
         }
-
 
 /*------------------------------------*\
     $TYPOGRAPHY
