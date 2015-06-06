@@ -9,6 +9,19 @@
 		<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
+		{% if social.enabled %}
+		<style>
+		.social {
+			width: 20px;
+			height: 17px;
+		}
+		{% for link in social %}
+		.{{link.type}} {
+			background-image: url({{link.image}});
+		}
+		{% endfor %}
+		</style>
+		{% endif %}
 	</head>
 	<body class="animated bounceInDown" xmlns:v="http://rdf.data-vocabulary.org/#" typeof="v:Person">
 		<div class="avatar">
@@ -24,7 +37,7 @@
 			{% if social.enabled %}
 			<ul class="social-icons">
 				{% for link in social %}
-				<li><a class="{{link.type}}" href="{{link.url}}" title="{{link.name}}">{{link.name}}</a></li>
+				<li><a class="social {{link.type}}" href="{{link.url}}" title="{{link.name}}">{{link.name}}</a></li>
 				{% endfor %}
 			</ul>
 			{% endif %}
