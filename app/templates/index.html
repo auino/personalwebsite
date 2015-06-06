@@ -15,7 +15,7 @@
 		ga('create', '{{stats.analytics}}', 'auto');
 		ga('send', 'pageview');
 		</script>
-		{% if stats.showprivacypolicymessage %}
+		{% if stats.privacypolicy.enabled %}
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 		<script src="{{STATIC_URL}}js/jquery.cookiesdirective.js"></script>
 		{% endif %}
@@ -28,9 +28,9 @@
 		a {
 			color: {{colors.links}};
 		}
-		{% if stats.enabled and stats.showprivacypolicymessage %}
+		{% if stats.enabled and stats.privacypolicy.enabled %}
 		a.privacypolicy {
-			color: {{colors.privacypolicylink}};
+			color: {{stats.privacypolicy.linkcolor}};
 		}
 		{% endif %}
 		{% if social.enabled %}
@@ -76,14 +76,17 @@
 				{% endif %}
 			</div>
 		</div>
-		{% if stats.showprivacypolicymessage %}
+		{% if stats.privacypolicy.enabled %}
 		<script type="text/javascript">
 		$(document).ready(function() {
 			$.cookiesDirective({
-				//privacyPolicyUri: '{{STATIC_URL}}html/privacypolicy.html',
+				{% if stats.privacypolicy.link %}
+				privacyPolicyUri: '{{stats.privacypolicy.link}}',
+				{% endif %}
 				message: 'This website makes use of Google Analytics to place cookies on your computer. By surfing the website, we\'ll assume that you accept to receive all cookies from this website. If you would like to change your preferences you may follow the <a class="privacypolicy" href="http://www.aboutcookies.org/Default.aspx?page=1">relative instructions</a>.',
 				explicitConsent: false,
 				position : 'bottom',
+				duration: {{stats.privacypolicy.duration}},
 				cookieScripts: 'Google Analytics', 
 				backgroundColor: '{{colors.text}}',
 				linkColor: '{{colors.privacypolicylink}}'
