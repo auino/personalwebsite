@@ -6,11 +6,12 @@ The personal web site is easy to update, since it may link to your local Dropbox
 
 ### Features ###
  * High customization (colors, texts, etc.)
+ * Responsive design (mobile and desktop support)
  * Web site content is easy to change
- * Configuration files may be linked to your Dropbox profile
- * Google Analytics support
- * European cookie law message support
- * Heroku deploy support
+ * Configuration files may be linked to your [Dropbox](https://www.dropbox.com) profile
+ * [Google Analytics](https://analytics.google.com) support
+ * [European cookie law](http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm) message support
+ * [Heroku](https://heroku.com) deploy support
 
 ### Configuration (through Dropbox) ###
  1. Extract `configuration.zip` file to your public Dropbox folder
