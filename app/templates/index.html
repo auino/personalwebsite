@@ -59,7 +59,7 @@
 				{% if social.enabled %}
 				<ul class="social-icons">
 					{% for link in social.data %}
-					<li><a class="social {{link.type}}" href="{{link.url}}" title="{{link.name}}">{{link.name}}</a></li>
+					<li><a class="social {{link.type}}" href="{{link.url}}" title="{{link.name}}" {{target}}>{{link.name}}</a></li>
 					{% endfor %}
 				</ul>
 				{% endif %}
