@@ -7,6 +7,7 @@ The personal web site is easy to update, since it may link to your local Dropbox
 ### Features ###
  * High customization (colors, texts, etc.)
  * Responsive design (mobile and desktop support)
+ * [RDFa schema](http://www.data-vocabulary.org) support
  * Web site content is easy to change
  * Configuration files may be linked to your [Dropbox](https://www.dropbox.com) profile
  * [Google Analytics](https://analytics.google.com) support
