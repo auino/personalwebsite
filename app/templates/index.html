@@ -25,12 +25,6 @@
 			background-color: {{colors.background}};
 			color: {{colors.text}};
 		}
-		#fork {
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			padding: 0.3em;
-		}
 		a {
 			color: {{colors.links}};
 		}
@@ -51,11 +45,6 @@
 		</style>
 	</head>
 	<body>
-		{% if fork.enabled %}
-		<div id="fork">
-			<a href="{{fork.url}}">{{fork.text}}</a>
-		</div>
-		{% endif %}
 		<div class="person animated bounceInDown" itemscope itemtype="http://schema.org/Person">
 			<div class="avatar">
 				<img itemprop="image" src="{{avatar}}" alt="Avatar of {{name}} {{surname}}"/>
@@ -84,6 +73,11 @@
 				{% endif %}
 				{% if email.address %}
 				<p>{{email.question}} <a href="mailto:{{email.address}}{% if email.tag %}?subject=[{{email.tag}}]{% endif %}">Email me</a>.</p>
+				{% endif %}
+				{% if fork.enabled %}
+				<div id="fork">
+					<a href="{{fork.url}}">{{fork.text}}</a>
+				</div>
 				{% endif %}
 			</div>
 		</div>
