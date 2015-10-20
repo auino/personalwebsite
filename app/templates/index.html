@@ -25,7 +25,7 @@
 			background-color: {{colors.background}};
 			color: {{colors.text}};
 		}
-		div.fork {
+		#fork {
 			position: absolute;
 			bottom: 0;
 			right: 0;
@@ -52,7 +52,7 @@
 	</head>
 	<body>
 		{% if fork.enabled %}
-		<div class="fork">
+		<div id="fork">
 			<a href="{{fork.url}}">{{fork.text}}</a>
 		</div>
 		{% endif %}
