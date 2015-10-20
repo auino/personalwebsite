@@ -51,6 +51,11 @@
 		</style>
 	</head>
 	<body>
+		{% if fork.enabled %}
+		<div class="fork">
+			<a href="{{fork.url}}">{{fork.text}}</a>
+		</div>
+		{% endif %}
 		<div class="person animated bounceInDown" itemscope itemtype="http://schema.org/Person">
 			<div class="avatar">
 				<img itemprop="image" src="{{avatar}}" alt="Avatar of {{name}} {{surname}}"/>
@@ -82,11 +87,6 @@
 				{% endif %}
 			</div>
 		</div>
-		{% if fork.enabled %}
-		<div class="fork">
-			<a href="{{fork.url}}">{{fork.text}}</a>
-		</div>
-		{% endif %}
 		{% if stats.privacypolicy.enabled %}
 		<script type="text/javascript">
 		$(document).ready(function() {
