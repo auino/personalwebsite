@@ -9,7 +9,7 @@ The personal web site is easy to update, since it may link to your local Dropbox
  * Responsive design (mobile and desktop support)
  * [RDFa schema](http://www.data-vocabulary.org) support
  * Web site content is easy to change
- * Configuration files may be linked to your [Dropbox](https://www.dropbox.com) profile
+ * Configuration files may be linked to your [Dropbox](https://www.dropbox.com) profile (no login needed)
  * [Google Analytics](https://analytics.google.com) support
  * [European cookie law](http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm) message support
  * [Heroku](https://heroku.com) deploy support
@@ -20,4 +20,5 @@ The personal web site is easy to update, since it may link to your local Dropbox
  3. Change the `app/views.py` `url` variable to your `configuration.json` Dropbox public file path
  4. At this point, you can deploy your website (i.e. to [Heroku](https://heroku.com), hence pointing your DNS domain to Heroku)
 
+### Demo ###
 Live demo available at [www.auino.com](http://www.auino.com)
