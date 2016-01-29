@@ -4,6 +4,8 @@ An Heroku deployable personal website made in Django
 Based on the same content structure of [denzildoyle/placeholder-site](https://github.com/denzildoyle/placeholder-site), this software allows you to set up your personal web page.
 The personal web site is easy to update, since it may link to your local Dropbox published configuration files, and also allows you to easily deploy the website on [Heroku](https://heroku.com).
 
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 ### Features ###
  * High customization (colors, texts, etc.)
  * Responsive design (mobile and desktop support)
@@ -13,8 +15,6 @@ The personal web site is easy to update, since it may link to your local Dropbox
  * [Google Analytics](https://analytics.google.com) support
  * [European cookie law](http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm) message support
  * [Heroku](https://heroku.com) deploy support
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ### Configuration (through Dropbox) ###
  1. Extract `configuration.zip` file to your public Dropbox folder
