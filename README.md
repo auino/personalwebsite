@@ -14,6 +14,8 @@ The personal web site is easy to update, since it may link to your local Dropbox
  * [European cookie law](http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm) message support
  * [Heroku](https://heroku.com) deploy support
 
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
 ### Configuration (through Dropbox) ###
  1. Extract `configuration.zip` file to your public Dropbox folder
  2. Open extracted `configuration.json` and set your web site content accordingly
