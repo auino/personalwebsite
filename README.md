@@ -24,3 +24,5 @@ The personal web site is easy to update, since it may link to your local Dropbox
 
 ### Demo ###
 Live demo available at [www.auino.com](http://www.auino.com)
+
+![Demo screenshot](https://raw.githubusercontent.com/auino/personalwebsite/master/media/screenshot.png)
