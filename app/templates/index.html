@@ -28,6 +28,14 @@
 		a {
 			color: {{colors.links}};
 		}
+		div#fork {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		img#fork {
+			max-width: 150px;
+		}
 		{% if stats.enabled and stats.privacypolicy.enabled %}
 		a.privacypolicy {
 			color: {{stats.privacypolicy.linkcolor}};
@@ -45,6 +53,11 @@
 		</style>
 	</head>
 	<body>
+		{% if fork.enabled %}
+		<div id="fork">
+			<a href="{{fork.url}}"><img id="fork" src="{{STATIC_URL}}img/fork.png" alt="{{fork.text}}"/></a>
+		</div>
+		{% endif %}
 		<div class="person animated bounceInDown" itemscope itemtype="http://schema.org/Person">
 			<div class="avatar">
 				<img itemprop="image" src="{{avatar}}" alt="Avatar of {{name}} {{surname}}"/>
@@ -73,11 +86,6 @@
 				{% endif %}
 				{% if email.address %}
 				<p>{{email.question}} <a href="mailto:{{email.address}}{% if email.tag %}?subject=[{{email.tag}}]{% endif %}">Email me</a>.</p>
-				{% endif %}
-				{% if fork.enabled %}
-				<div id="fork">
-					<a href="{{fork.url}}">{{fork.text}}</a>
-				</div>
 				{% endif %}
 			</div>
 		</div>
