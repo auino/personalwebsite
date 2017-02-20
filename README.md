@@ -1,8 +1,6 @@
 # personalwebsite
 An Heroku deployable personal website made in Django
 
-(To be updated due to removal of Dropbox support to Public folders)
-
 Based on the same content structure of [denzildoyle/placeholder-site](https://github.com/denzildoyle/placeholder-site), this software allows you to set up your personal web page.
 The personal web site is easy to update, since it may link to your local Dropbox published configuration files, and also allows you to easily deploy the website on [Heroku](https://heroku.com).
 
@@ -13,16 +11,22 @@ The personal web site is easy to update, since it may link to your local Dropbox
  * Responsive design (mobile and desktop support)
  * [RDFa schema](http://www.data-vocabulary.org) support
  * Web site content is easy to change
- * Configuration files may be linked to your [Dropbox](https://www.dropbox.com) profile (no login needed)
+ * Directly linked to your [GitHub](https://github.com) fork
  * [Google Analytics](https://analytics.google.com) support
  * [European cookie law](http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm) message support
  * [Heroku](https://heroku.com) deploy support
 
-### Configuration (through Dropbox) ###
- 1. Extract `configuration.zip` file to your public Dropbox folder
- 2. Open extracted `configuration.json` and set your web site content accordingly
- 3. Change the `app/views.py` `url` variable to your `configuration.json` Dropbox public file path
- 4. At this point, you can deploy your website (i.e. to [Heroku](https://heroku.com), hence pointing your DNS domain to Heroku)
+### Configuration (through GitHub) ###
+ 1. Fork the original [auino/personalwebsite](https://github.com/auino/personalwebsite) project
+ 2. Edit the `app/static/configuration/configuration.json` file and set it accordingly to your needs
+ 3. Change the `app/static/configuration/img/avatar.jpg` file with your profile picture
+
+### Heroku deploy ###
+In order to deploy your website to [Heroku](https://heroku.com), just create a new Heroku project, link it to GitHub and follow the steps reported in the following image.
+
+![Heroku deploy steps](https://raw.githubusercontent.com/auino/personalwebsite/master/media/heroku_deploy.gif)
+
+Optionally, you can [set up your DNS records to Heroku servers](https://devcenter.heroku.com/articles/custom-domains).
 
 ### Demo ###
 Live demo available at [www.auino.com](http://www.auino.com)
