@@ -85,7 +85,7 @@
 				</p>
 				{% endif %}
 				{% if email.address %}
-				<p>{{email.question}} <a href="mailto:{{email.address}}{% if email.tag %}?subject=[{{email.tag}}]{% endif %}">Email me</a>.</p>
+				<p>{{email.question}} <a href="mailto:{{email.address.name}}@{{email.address.domain}}{% if email.tag %}?subject=[{{email.tag}}]{% endif %}">Email me</a>.</p>
 				{% endif %}
 			</div>
 		</div>

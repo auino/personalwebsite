@@ -1,0 +1,121 @@
+{
+	"name": "Enrico",
+	"surname": "Cambiaso",
+	"role": "Computer Scientist",
+	"avatar": "/static/configuration/img/avatar.jpg",
+	"colors": {
+		"background": "#f6f9f9",
+		"text": "#95a4a9",
+		"links": "#339999"
+	},
+	"fork": {
+		"enabled": true,
+		"hide": true,
+		"duration": 30,
+		"text": "Fork this project on GitHub",
+		"url": "https://github.com/auino/personalwebsite"
+	},
+	"stats": {
+		"enabled": true,
+		"analytics": "UA-63819188-1",
+		"privacypolicy": {
+			"enabled": true,
+			"linkcolor": "#ffffff",
+			"duration": 10,
+			"link": null
+		}
+	},
+	"social": {
+		"enabled": true,
+		"data": [
+			{
+				"type": "github",
+				"name": "GitHub",
+				"url": "https://github.com/auino",
+				"image": {
+					"url": "/static/configuration/img/social/github.png",
+					"width": 18,
+					"height": 17
+				}
+			},
+			{
+				"type": "linkedin",
+				"name": "LinkedIn",
+				"url": "https://linkedin.com/in/enricocambiaso",
+				"image": {
+					"url": "/static/configuration/img/social/linkedin.png",
+					"width": 20,
+					"height": 17
+				}
+			},
+			{
+				"type": "twitter",
+				"name": "Twitter",
+				"url": "https://twitter.com/auino",
+				"image": {
+					"url": "/static/configuration/img/social/twitter.png",
+					"width": 20,
+					"height": 17
+				}
+			},
+			{
+				"type": "blogger",
+				"name": "Blogger",
+				"url": "http://enricocambiaso.blogspot.com",
+				"image": {
+					"url": "/static/configuration/img/social/blogger.png",
+					"width": 17,
+					"height": 17
+				}
+			},
+			{
+				"type": "photoservice",
+				"name": "500px",
+				"url": "http://500px.com/auino",
+				"image": {
+					"url": "/static/configuration/img/social/500px.png",
+					"width": 24,
+					"height": 20
+				}
+			},
+			{
+				"type": "googleplus",
+				"name": "Google Plus",
+				"url": "http://plus.google.com/+EnricoCambiaso",
+				"image": {
+					"url": "/static/configuration/img/social/googleplus.png",
+					"width": 20,
+					"height": 19
+				}
+			},
+			{
+				"type": "facebook",
+				"name": "Facebook",
+				"url": "https://www.facebook.com/enrico.cambiaso",
+				"image": {
+					"url": "/static/configuration/img/social/facebook.png",
+					"width": 10,
+					"height": 17
+				}
+			}
+		]
+	},
+	"links": {
+		"enabled": false,
+		"title": "",
+		"list": [
+			{
+				"url":"",
+				"name":""
+			}
+		]
+	},
+	"email": {
+		"address": {
+			"name": "enrico.cambiaso",
+			"domain": "gmail.com"
+		},
+		"tag": "Auino website",
+		"question": "Want to send me nerdish things?"
+	}
+}

@@ -1,10 +1,13 @@
 import urllib, json
 from django.shortcuts import render
+from django.conf import settings
+
+#BASEURL='http://www.auino.com' # DEBUG
+BASEURL=settings.SITE_URL
 
 # Create your views here.
 def index(request):
-	# point following variable to your configuration.json Dropbox public url
-	url = 'https://dl.dropboxusercontent.com/u/280149/auino.com/configuration.json'
+	url = BASEURL+'/static/configuration/configuration.json'
 	response = urllib.urlopen(url);
 	configuration = json.loads(response.read())
 	return render(request, 'index.html', configuration)
