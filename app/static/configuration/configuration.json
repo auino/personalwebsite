@@ -2,7 +2,7 @@
 	"name": "Enrico",
 	"surname": "Cambiaso",
 	"role": "Computer Scientist",
-	"avatar": "/static/configuration/img/avatar.jpg",
+	"avatar": "/static/configuration/img/avatar.png",
 	"colors": {
 		"background": "#f6f9f9",
 		"text": "#95a4a9",
