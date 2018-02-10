@@ -70,7 +70,10 @@
 				{% endif %}
 				{% if social.enabled %}
 				<ul class="social-icons">
-					
+					{% for link in social.data %}
+					<!-- <li><a class="social {{link.type}}" href="{{link.url}}" title="{{link.name}}" {{target}}>{{link.name}}</a></li> -->
+					<li><a class="social" href="{{link.url}}" title="{{link.name}}" {{target}}><i class="{{link.faclasses}}"></i></a></li>
+					{% endfor %}
 				</ul>
 				{% endif %}
 				{% if links.enabled %}

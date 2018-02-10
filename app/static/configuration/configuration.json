@@ -29,37 +29,37 @@
 		"enabled": true,
 		"data": [
 			{
-				"fa-classes": "fab fa-github",
+				"faclasses": "fab fa-github",
 				"name": "GitHub",
 				"url": "https://github.com/auino"
 			},
 			{
-				"fa-classes": "fab fa-linkedin",
+				"faclasses": "fab fa-linkedin",
 				"name": "LinkedIn",
 				"url": "https://linkedin.com/in/enricocambiaso"
 			},
 			{
-				"fa-classes": "fab fa-twitter-square",
+				"faclasses": "fab fa-twitter-square",
 				"name": "Twitter",
 				"url": "https://twitter.com/auino"
 			},
 			{
-				"fa-classes": "fab fa-blogger",
+				"faclasses": "fab fa-blogger",
 				"name": "Blogger",
 				"url": "http://enricocambiaso.blogspot.com"
 			},
 			{
-				"fa-classes": "fab fa-500px",
+				"faclasses": "fab fa-500px",
 				"name": "500px",
 				"url": "http://500px.com/auino"
 			},
 			{
-				"fa-classes": "fab fa-google-plus",
+				"faclasses": "fab fa-google-plus",
 				"name": "Google Plus",
 				"url": "http://plus.google.com/+EnricoCambiaso"
 			},
 			{
-				"fa-classes": "fab fa-facebook-square",
+				"faclasses": "fab fa-facebook-square",
 				"name": "Facebook",
 				"url": "https://www.facebook.com/enrico.cambiaso"
 			}
