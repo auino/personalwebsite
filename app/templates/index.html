@@ -45,13 +45,9 @@
 		}
 		{% endif %}
 		{% if social.enabled %}
-		{% for link in social.data %}
-		.{{link.type}} {
-			background-image: url({{link.image.url}});
-			width: {{link.image.width}}px;
-			height: {{link.image.height}}px;
+		.social {
+			height: 17px;
 		}
-		{% endfor %}
 		{% endif %}
 		</style>
 	</head>
@@ -76,7 +72,7 @@
 				<ul class="social-icons">
 					{% for link in social.data %}
 					<!-- <li><a class="social {{link.type}}" href="{{link.url}}" title="{{link.name}}" {{target}}>{{link.name}}</a></li> -->
-					<li><i class="fab fa-{{link.type}}"></i></li>
+					<li><a class="social" href="{{link.url}}" title="{{link.name}}" {{target}}><i class="{{link.fa-classes}}"></i></a></li>
 					{% endfor %}
 				</ul>
 				{% endif %}
