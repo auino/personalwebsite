@@ -11,6 +11,7 @@ The personal web site is easy to update, since it may link to your GitHub fork o
  * Responsive design (mobile and desktop support)
  * [RDFa schema](http://www.data-vocabulary.org) support
  * Web site content is easy to change
+ * Support to [Font Awesome](https://fontawesome.com) icons
  * Directly linked to your [GitHub](https://github.com) fork
  * [Google Analytics](https://analytics.google.com) support
  * [European cookie law](http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm) message support
@@ -18,7 +19,7 @@ The personal web site is easy to update, since it may link to your GitHub fork o
 
 ### Configuration (through GitHub) ###
  1. Fork the original [auino/personalwebsite](https://github.com/auino/personalwebsite) project
- 2. Edit the `app/static/configuration/configuration.json` file and set it accordingly to your needs
+ 2. Edit the `app/static/configuration/configuration.json` file and set it accordingly to your needs (concerning the `faicon` field for social buttons icon, you have to specify the [Font Awesome](https://fontawesome.com) class of each icon, e.g., `fa-github` for GitHub links)
  3. Change the `app/static/configuration/img/avatar.jpg` file with your profile picture
 
 ### Heroku deploy ###
