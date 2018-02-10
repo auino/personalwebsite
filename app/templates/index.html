@@ -20,6 +20,9 @@
 		<script src="{{STATIC_URL}}js/jquery.cookiesdirective.js"></script>
 		{% endif %}
 		{% endif %}
+		{% if social.enabled %}
+		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+		{% endif %}
 		<style>
 		html {
 			background-color: {{colors.background}};
@@ -72,7 +75,8 @@
 				{% if social.enabled %}
 				<ul class="social-icons">
 					{% for link in social.data %}
-					<li><a class="social {{link.type}}" href="{{link.url}}" title="{{link.name}}" {{target}}>{{link.name}}</a></li>
+					<!-- <li><a class="social {{link.type}}" href="{{link.url}}" title="{{link.name}}" {{target}}>{{link.name}}</a></li> -->
+					<li><i class="fab fa-{{link.type}}"></i></li>
 					{% endfor %}
 				</ul>
 				{% endif %}
