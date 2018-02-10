@@ -6,7 +6,7 @@
 	"colors": {
 		"background": "#f6f9f9",
 		"text": "#95a4a9",
-		"links": "#339999"
+		"links": "#8ca3a3"
 	},
 	"fork": {
 		"enabled": true,
