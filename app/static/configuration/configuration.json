@@ -39,6 +39,11 @@
 				"url": "https://linkedin.com/in/enricocambiaso"
 			},
 			{
+				"faicon": "fa-researchgate",
+				"name": "ResearchGate",
+				"url": "https://www.researchgate.net/profile/Enrico_Cambiaso"
+			},
+			{
 				"faicon": "fa-twitter-square",
 				"name": "Twitter",
 				"url": "https://twitter.com/auino"
@@ -54,14 +59,9 @@
 				"url": "http://500px.com/auino"
 			},
 			{
-				"faicon": "fa-google-plus",
-				"name": "Google Plus",
-				"url": "http://plus.google.com/+EnricoCambiaso"
-			},
-			{
-				"faicon": "fa-facebook-square",
-				"name": "Facebook",
-				"url": "https://www.facebook.com/enrico.cambiaso"
+				"faicon": "fa-instagram",
+				"name": "Instagram",
+				"url": "https://www.instagram.com/enrico.cambiaso/"
 			}
 		]
 	},
