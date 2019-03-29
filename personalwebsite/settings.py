@@ -119,8 +119,8 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     #'/tmp/pp/personalwebsite/app/templates'
-    #os.path.join(SETTINGS_PATH, 'templates'),
-    PROJECT_PATH + '/templates/'
+    os.path.join(SETTINGS_PATH, 'templates'),
+    #PROJECT_PATH + '/templates/'
 )
 
 INSTALLED_APPS = (
