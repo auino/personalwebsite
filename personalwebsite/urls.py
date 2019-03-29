@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.contrib import admin
 
-from django.conf.urls import include, url, static
+from django.conf.urls import url, static
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
@@ -13,7 +13,7 @@ urlpatterns = [
     # Examples:
     #url(r'^$', 'personalwebsite.views.index', name='home'),
     #url(r'^$', 'app.views.index', name='home'),
-    url(r'^$', include(app.views.index)),
+    url(r'^$', index, name='home'),
     # url(r'^personalwebsite/', include('personalwebsite.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
