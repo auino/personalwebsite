@@ -121,8 +121,11 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     #'/tmp/pp/personalwebsite/app/templates'
     #os.path.join(SETTINGS_PATH, 'templates'),
-    os.path.join(BASE_DIR, 'app/templates'),
+    os.path.join(BASE_DIR, '../app/templates'),
 )
+print BASE_DIR
+print os.path.join(BASE_DIR, '../app/templates')
+print os.listdir(os.path.join(BASE_DIR, '../app/templates'))
 
 INSTALLED_APPS = (
     'django.contrib.auth',
