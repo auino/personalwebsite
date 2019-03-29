@@ -21,6 +21,7 @@ The personal web site is easy to update, since it may link to your GitHub fork o
  1. Fork the original [auino/personalwebsite](https://github.com/auino/personalwebsite) project
  2. Edit the `app/static/configuration/configuration.json` file and set it accordingly to your needs (concerning the `faicon` field for social buttons icon, you have to specify the [Font Awesome](https://fontawesome.com) class of each icon, e.g., `fa-github` for GitHub links)
  3. Change the `app/static/configuration/img/avatar.jpg` file with your profile picture
+ 4. Update the `ALLOWED_HOSTS` variable on the `personalwebsite/settings.py` file to match your domain
 
 ### Heroku deploy ###
 In order to deploy your website to [Heroku](https://heroku.com), just create a new Heroku project, link it to GitHub and follow the steps reported in the following image.
