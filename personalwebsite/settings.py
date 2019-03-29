@@ -70,15 +70,12 @@ STATIC_ROOT = 'static'
 STATIC_URL = '/static/'
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(BASE_DIR, '../app/static'),
-)
-
-STATIC_DIRS = (
     os.path.join(BASE_DIR, '../app/static'),
 )
 

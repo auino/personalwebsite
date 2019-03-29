@@ -61,7 +61,7 @@
 	<body>
 		{% if fork.enabled %}
 		<div id="fork">
-			<a href="{{fork.url}}"><img id="fork" src="{{STATIC_URL}}img/fork.png" alt="{{fork.text}}"/></a>
+			<a href="{{fork.url}}"><img id="fork" src="{% static "img/fork.png" %}" alt="{{fork.text}}"/></a>
 		</div>
 		{% endif %}
 		<div class="person animated bounceInDown" itemscope itemtype="http://schema.org/Person">
