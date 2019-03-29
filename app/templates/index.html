@@ -5,6 +5,10 @@
 		<meta charset="utf-8">
 		<title>{{name}} {{surname}}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta property="og:title" content="{{name}} {{surname}}"/>
+		<meta property="og:image" content="{{avatar}}"/>
+		<meta property="og:description" content="Personal profile page of {{name}} {{surname}}, {{role}}."/>
+		<meta property="og:url" content="{{baseurl}}" />
 		<link rel="stylesheet" href="{% static 'css/style.css' %}">
 		<script src="{{dataurl}}" type="text/javascript"></script>
 		<!--[if lt IE 9]>
