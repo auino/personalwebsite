@@ -14,7 +14,7 @@ The personal web site is easy to update, since it may link to your GitHub fork o
  * Support to [Font Awesome](https://fontawesome.com) icons
  * Directly linked to your [GitHub](https://github.com) fork
  * [Google Analytics](https://analytics.google.com) support
- * [European cookie law](http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm) message support
+ * [European cookie law](http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm) message support (ask for legal support if cookies are collected, since I'm not responsible of improper usage of this feature)
  * [Heroku](https://heroku.com) deploy support
 
 ### Configuration (through GitHub) ###
