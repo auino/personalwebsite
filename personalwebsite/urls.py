@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.contrib import admin
 
-from django.conf.urls import url, static
+from django.conf.urls import include, url, static
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
