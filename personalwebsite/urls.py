@@ -1,13 +1,13 @@
 from django.conf import settings
-#from django.conf.urls import patterns, include, url, static
 from django.contrib import admin
 
 from django.conf.urls import url, static
-#from django.conf.urls.defaults import *
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 #admin.autodiscover()
+
+from app.views import index
 
 urlpatterns = [
     # Examples:
