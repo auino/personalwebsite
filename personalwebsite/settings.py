@@ -122,7 +122,8 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     #'/tmp/pp/personalwebsite/app/templates'
     #os.path.join(SETTINGS_PATH, 'templates'),
-    os.path.join(PROJECT_PATH, 'templates'),
+    #os.path.join(PROJECT_PATH, 'templates'),
+    PROJECT_PATH+'/templates/'
 )
 
 INSTALLED_APPS = (
