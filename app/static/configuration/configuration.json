@@ -16,10 +16,10 @@
 		"url": "https://github.com/auino/personalwebsite"
 	},
 	"stats": {
-		"enabled": true,
-		"analytics": "UA-63819188-1",
+		"enabled": false,
+		"analytics": "UA-63819188-1_DISABLED",
 		"privacypolicy": {
-			"enabled": true,
+			"enabled": false,
 			"linkcolor": "#ffffff",
 			"duration": 10,
 			"link": null
