@@ -6,7 +6,7 @@ The personal web site is easy to update, since it may link to your GitHub fork o
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-### Features ###
+### Features ###
  * High customization (colors, texts, etc.)
  * Responsive design (mobile and desktop support)
  * [RDFa schema](http://www.data-vocabulary.org) support
@@ -17,7 +17,7 @@ The personal web site is easy to update, since it may link to your GitHub fork o
  * [European cookie law](http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm) message support
  * [Heroku](https://heroku.com) deploy support
 
-### Configuration (through GitHub) ###
+### Configuration (through GitHub) ###
  1. Fork the original [auino/personalwebsite](https://github.com/auino/personalwebsite) project
  2. Edit the `app/static/configuration/configuration.json` file and set it accordingly to your needs (concerning the `faicon` field for social buttons icon, you have to specify the [Font Awesome](https://fontawesome.com) class of each icon, e.g., `fa-github` for GitHub links)
  3. Change the `app/static/configuration/img/avatar.jpg` file with your profile picture
