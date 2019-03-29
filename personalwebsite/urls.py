@@ -2,7 +2,7 @@ from django.conf import settings
 #from django.conf.urls import patterns, include, url, static
 from django.contrib import admin
 
-from django.conf.urls import static
+from django.conf.urls import url, static
 #from django.conf.urls.defaults import *
 
 # Uncomment the next two lines to enable the admin:
