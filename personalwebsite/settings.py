@@ -115,6 +115,22 @@ WSGI_APPLICATION = 'personalwebsite.wsgi.application'
 
 #SETTINGS_PATH = os.path.normpath(os.path.dirname(__file__))
 
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
@@ -123,9 +139,6 @@ TEMPLATE_DIRS = (
     #os.path.join(SETTINGS_PATH, 'templates'),
     os.path.join(BASE_DIR, '../app/templates'),
 )
-print BASE_DIR
-print os.path.join(BASE_DIR, '../app/templates')
-print os.listdir(os.path.join(BASE_DIR, '../app/templates'))
 
 INSTALLED_APPS = (
     'django.contrib.auth',
