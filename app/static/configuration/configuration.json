@@ -16,7 +16,7 @@
 		"url": "https://github.com/auino/personalwebsite"
 	},
 	"stats": {
-		"enabled": true,
+		"enabled": false,
 		"analytics": "UA-63819188-1",
 		"privacypolicy": {
 			"enabled": true,
