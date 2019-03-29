@@ -13,7 +13,7 @@ urlpatterns = [
     # Examples:
     #url(r'^$', 'personalwebsite.views.index', name='home'),
     #url(r'^$', 'app.views.index', name='home'),
-    url(r'^$', index),
+    url(r'^$', include(app.views.index)),
     # url(r'^personalwebsite/', include('personalwebsite.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
