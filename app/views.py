@@ -12,4 +12,5 @@ def index(request):
 
 	t = loader.get_template('index.html')
 	c = Context({ 'object_list': None })
-	return render(request, 'index.html', configuration)
+	return t.render(c)
+	#return render(request, 'index.html', configuration)
