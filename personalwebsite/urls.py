@@ -2,6 +2,7 @@ from django.conf import settings
 from django.contrib import admin
 from django.conf.urls import url, static
 from django.views.static import serve
+from django.shortcuts import render
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
