@@ -10,7 +10,7 @@ def index(request):
 	response = urllib.urlopen(url);
 	configuration = json.loads(response.read())
 
-	t = loader.get_template('index.html')
+	t = loader.get_template('templates/index.html')
 	c = Context({ 'object_list': None })
 	return t.render(c)
 	#return render(request, 'index.html', configuration)
