@@ -4,8 +4,8 @@
 	"baseurl": "http://www.auino.com",
 	"role": "Computer Scientist",
 	"avatar": {
-		"large": "/static/configuration/img/avatar-large.png",
-		"small": "/static/configuration/img/avatar-small.png"
+		"large": "/static/configuration/img/avatar-large.jpg",
+		"small": "/static/configuration/img/avatar-small.jpg"
 	},
 	"colors": {
 		"background": "#f6f9f9",
