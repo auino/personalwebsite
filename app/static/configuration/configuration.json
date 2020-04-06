@@ -3,7 +3,10 @@
 	"surname": "Cambiaso",
 	"baseurl": "http://www.auino.com",
 	"role": "Computer Scientist",
-	"avatar": "/static/configuration/img/avatar.png",
+	"avatar": {
+		"large": "/static/configuration/img/avatar-large.png",
+		"small": "/static/configuration/img/avatar-small.png"
+	},
 	"colors": {
 		"background": "#f6f9f9",
 		"text": "#95a4a9",
