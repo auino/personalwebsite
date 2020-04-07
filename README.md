@@ -10,6 +10,7 @@ The personal web site is easy to update, since it may link to your GitHub fork o
  * High customization (colors, texts, etc.)
  * Responsive design (mobile and desktop support)
  * [RDFa schema](http://www.data-vocabulary.org) support
+ * SEO friendly
  * Web site content is easy to change
  * Support to [Font Awesome](https://fontawesome.com) icons
  * Directly linked to your [GitHub](https://github.com) fork
