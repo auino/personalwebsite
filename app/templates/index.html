@@ -10,7 +10,7 @@
 		<meta property="og:description" content="Personal profile page of {{name}} {{surname}}, {{role}}."/>
 		<meta property="og:url" content="{{baseurl}}" />
 		<link rel="stylesheet" href="{% static 'css/style.css' %}">
-		<script src="{{dataurl}}" type="text/javascript"></script>
+		<script async src="{{dataurl}}" type="text/javascript"></script>
 		<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -21,8 +21,8 @@
 		ga('send', 'pageview');
 		</script>
 		{% if stats.privacypolicy.enabled %}
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-		<script src="{% static 'js/jquery.cookiesdirective.js' %}"></script>
+		<script async src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+		<script defer src="{% static 'js/jquery.cookiesdirective.js' %}"></script>
 		{% endif %}
 		{% endif %}
 		{% if social.enabled %}
@@ -101,7 +101,7 @@
 			</div>
 		</div>
 		{% if stats.privacypolicy.enabled %}
-		<script type="text/javascript">
+		<script defer type="text/javascript">
 		$(document).ready(function() {
 			$.cookiesDirective({
 				{% if stats.privacypolicy.link %}
