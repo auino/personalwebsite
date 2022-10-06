@@ -1,13 +1,13 @@
 <?php
 	$content = file_get_contents("/static/configuration/configuration.json");
-	$content = json_decode($content, true);
+	//$content = json_decode($content, true);
 ?>
 {% load static from staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title><?=$content['name']?> {{surname}}</title>
+		<title><?=$content?> {{surname}}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta property="og:title" content="{{name}} {{surname}}"/>
 		<meta property="og:image" content="{{avatar}}"/>
