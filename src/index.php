@@ -82,6 +82,7 @@
 				<p itemprop="jobTitle">
 					<?=$configuration['role']?>
 				</p>
+				<? } ?>
 
 	</body>
 </html>
