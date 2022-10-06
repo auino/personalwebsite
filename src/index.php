@@ -82,27 +82,6 @@
 				<p itemprop="jobTitle">
 					<?=$configuration['role']?>
 				</p>
-				<? } ?>
-				<? if($configuration['social']['enabled']) { ?>
-				<ul class="social-icons">
-					{% for link in social.data %}
-					<li><a class="social" href="{{link.url}}" title="{{link.name}}" {{target}}><i class="fab {{link.faicon}}"></i></a></li>
-					{% endfor %}
-				</ul>
-				<? } ?>
-				<? if($configuration['links']['enabled']) { ?>
-				<p>
-					<?=$configuration['links']['title']) { ?><br>
-					{% for link in links.list %}
-					<a href="{{link.url}}">{{link.name}}</a><br>
-					{% endfor %}
-				</p>
-				<? } ?>
-				<? if($configuration['email']['address']) { ?>
-				<p>{{email.question}} <a href="mailto:{{email.address.name}}@{{email.address.domain}}{% if email.tag %}?subject=[{{email.tag}}]{% endif %}">Email me</a>.</p>
-				<? } ?>
-			</div>
-		</div>
 
 	</body>
 </html>
