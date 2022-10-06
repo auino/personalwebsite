@@ -1,1 +1,1 @@
-web: python app/manage.py collectstatic --noinput ; gunicorn personalwebsite --log-file -
+web: vendor/bin/heroku-php-apache2 /src

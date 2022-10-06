@@ -1,0 +1,90 @@
+{
+	"name": "Enrico",
+	"surname": "Cambiaso",
+	"baseurl": "http://www.auino.com",
+	"role": "Computer Scientist",
+	"avatar": {
+		"large": "/static/configuration/img/avatar-large.jpg",
+		"small": "/static/configuration/img/avatar-small.jpg"
+	},
+	"colors": {
+		"background": "#f6f9f9",
+		"text": "#316192",
+		"links": "#013162"
+	},
+	"fork": {
+		"enabled": true,
+		"hide": true,
+		"duration": 30,
+		"text": "Fork this project on GitHub",
+		"url": "https://github.com/auino/personalwebsite"
+	},
+	"stats": {
+		"enabled": false,
+		"analytics": "UA-63819188-1_DISABLED",
+		"privacypolicy": {
+			"enabled": false,
+			"linkcolor": "#ffffff",
+			"duration": 10,
+			"link": null
+		}
+	},
+	"social": {
+		"enabled": true,
+		"data": [
+			{
+				"faicon": "fa-github",
+				"name": "GitHub",
+				"url": "https://github.com/auino"
+			},
+			{
+				"faicon": "fa-linkedin",
+				"name": "LinkedIn",
+				"url": "https://linkedin.com/in/enricocambiaso"
+			},
+			{
+				"faicon": "fab fa-researchgate",
+				"name": "ResearchGate",
+				"url": "https://www.researchgate.net/profile/Enrico_Cambiaso"
+			},
+			{
+				"faicon": "fa-twitter-square",
+				"name": "Twitter",
+				"url": "https://twitter.com/auino"
+			},
+			{
+				"faicon": "fa-blogger",
+				"name": "Blogger",
+				"url": "http://enricocambiaso.blogspot.com"
+			},
+			{
+				"faicon": "fa-500px",
+				"name": "500px",
+				"url": "http://500px.com/auino"
+			},
+			{
+				"faicon": "fa-instagram",
+				"name": "Instagram",
+				"url": "https://www.instagram.com/enrico.cambiaso/"
+			}
+		]
+	},
+	"links": {
+		"enabled": false,
+		"title": "",
+		"list": [
+			{
+				"url":"",
+				"name":""
+			}
+		]
+	},
+	"email": {
+		"address": {
+			"name": "enrico.cambiaso",
+			"domain": "gmail.com"
+		},
+		"tag": "Auino website",
+		"question": "Want to send me nerdish things?"
+	}
+}
