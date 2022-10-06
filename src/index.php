@@ -69,7 +69,7 @@
 	<body>
 		<? if($configuration['fork']['enabled']) { ?>
 		<div id="fork">
-			<a href="<?=$configuration['fork']['url']?>"><img id="fork" src="{% static 'img/fork-large.png' %}" srcset="{% static 'img/fork-small.png' %} 480w, {% static 'img/fork-large.png' %} 1080w" sizes="50vw" alt="<?=$configuration['fork']['text']?>"/></a>
+			<a href="<?=$configuration['fork']['url']?>"><img id="fork" src="/static/img/fork-large.png" srcset="'/static/img/fork-small.png' 480w, '/static/img/fork-large.png' 1080w" sizes="50vw" alt="<?=$configuration['fork']['text']?>"/></a>
 		</div>
 		<? } ?>
 		<div class="person animated bounceInDown" itemscope itemtype="http://schema.org/Person">
