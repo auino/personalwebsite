@@ -9,8 +9,8 @@
 	},
 	"colors": {
 		"background": "#f6f9f9",
-		"text": "#316192",
-		"links": "#013162"
+		"text1": "#013162",
+		"links": "#6191b2"
 	},
 	"fork": {
 		"enabled": true,
@@ -24,7 +24,7 @@
 		"analytics": "UA-63819188-1_DISABLED",
 		"privacypolicy": {
 			"enabled": false,
-			"linkcolor": "#ffffff",
+			"linkcolor": "#6191b2",
 			"duration": 10,
 			"link": null
 		}
@@ -75,7 +75,8 @@
 		"list": [
 			{
 				"url":"",
-				"name":""
+				"name":"",
+				"target":"_new"
 			}
 		]
 	},

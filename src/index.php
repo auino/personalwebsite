@@ -12,7 +12,7 @@
 		<meta property="og:image" content="<?=$configuration['avatar']['large']?>"/>
 		<meta property="og:description" content="Personal profile page of <?=$configuration['name']?> <?=$configuration['surname']?>, <?=$configuration['role']?>."/>
 		<meta property="og:url" content="<?=$configuration['baseurl']?>" />
-		<link rel="stylesheet" href="{% static 'css/style.css' %}">
+		<link rel="stylesheet" href="/static/css/style.css">
 		<script async src="{{dataurl}}" type="text/javascript"></script>
 		<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -25,7 +25,7 @@
 		</script>
 		<? if($configuration['stats']['privacypolicy']['enabled']) { ?>
 		<script async src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-		<script defer src="{% static 'js/jquery.cookiesdirective.js' %}"></script>
+		<script defer src="/static/js/jquery.cookiesdirective.js"></script>
 		<? } ?>
 		<? } ?>
 		<? if($configuration['social']['enabled']) { ?>
@@ -33,11 +33,11 @@
 		<? } ?>
 		<style>
 		html {
-			background-color: {<?=$configuration['colors']['background']?>};
-			color: {<?=$configuration['colors']['text']?>};
+			background-color: <?=$configuration['colors']['background']?>;
+			color: <?=$configuration['colors']['text']?>;
 		}
 		a {
-			color: {<?=$configuration['colors']['links']?>};
+			color: <?=$configuration['colors']['links']?>;
 		}
 		div#fork {
 			position: absolute;
@@ -49,7 +49,7 @@
 		}
 		<? if($configuration['stats']['enabled'] && $configuration['stats']['privacypolicy']['enabled']) { ?>
 		a.privacypolicy {
-			color: {<?=$configuration['stats']['privacypolicy']['linkcolor']?>};
+			color: <?=$configuration['stats']['privacypolicy']['linkcolor']?>;
 		}
 		<? } ?>
 		<? if($configuration['social']['enabled']) { ?>
@@ -83,29 +83,40 @@
 					<?=$configuration['role']?>
 				</p>
 				<? } ?>
-				if($configuration['social']['enabled']) {
+				<? if($configuration['social']['enabled']) { ?>
 				<ul class="social-icons">
-					{% for link in social.data %}
-					<li><a class="social" href="{{link.url}}" title="{{link.name}}" {{target}}><i class="fab {{link.faicon}}"></i></a></li>
-					{% endfor %}
+					<? foreach($configuration['social']['data'] as $link) { ?>
+					<li><a class="social" href="<?=$link['url']?>" title="<?=$link['name']?>" target="<?=$link['target']?>"><i class="fab <?=$link['faicon']?>"></i></a></li>
+					<? } ?>
 				</ul>
-				}
+				<? } ?>
+				<? if($configuration['links']['enabled']) { ?>
+				<p>
+					<?=$configuration['links']['title']?><br>
+					{% for link in links.list %}
+					<a href="{{link.url}}">{{link.name}}</a><br>
+					{% endfor %}
+				</p>
+				<? } ?>
+				<? if($configuration['email']['address']) { ?>
+				<p><?=$configuration['email']['question']?> <a href="mailto:<?=$configuration['email']['address']['name']?>@<?=$configuration['email']['address']['domain']?><? if($configuration['email']['tag']) { ?>?subject=[<?=$configuration['email']['tag']?>]<? } ?>">Email me</a>.</p>
+				<? } ?>
 			</div>
 		</div>
 		<? if($configuration['stats']['privacypolicy']['enabled']) { ?>
 		<script defer type="text/javascript">
 		$(document).ready(function() {
 			$.cookiesDirective({
-				{% if stats.privacypolicy.link %}
-				privacyPolicyUri: '{{stats.privacypolicy.link}}',
+				<? if($configuration['stats']['privacypolicy']['link']) { ?>
+				privacyPolicyUri: '<?=$configuration['stats']['privacypolicy']['link']?>',
 				<? } ?>
 				message: 'This website makes use of Google Analytics to place cookies on your computer. By surfing the website, we\'ll assume that you accept to receive all cookies from this website.<br/>If you would like to change your preferences you may follow the <a class="privacypolicy" href="http://www.aboutcookies.org/Default.aspx?page=1" target="_new">relative instructions</a>.',
 				explicitConsent: true,
 				position : 'bottom',
-				duration: {{stats.privacypolicy.duration}},
+				duration: <?=$configuration['stats']['privacypolicy']['duration']?>,
 				cookieScripts: 'Google Analytics', 
-				backgroundColor: '{{colors.text}}',
-				linkColor: '{{stats.privacypolicy.linkcolor}}'
+				backgroundColor: '<?=$configuration['colors']['text']?>',
+				linkColor: '<?=$configuration['stats']['privacypolicy']['linkcolor']?>'
 			});
 		});
 		</script>
