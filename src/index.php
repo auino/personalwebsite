@@ -1,5 +1,5 @@
 <?php
-	$content = file_get_contents("/static/configuration/configuration.json");
+	$content = file_get_contents("./static/configuration/configuration.json");
 	//$content = json_decode($content, true);
 ?>
 {% load static from staticfiles %}
