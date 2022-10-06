@@ -9,8 +9,8 @@
 	},
 	"colors": {
 		"background": "#f6f9f9",
-		"text": "#95a4a9",
-		"links": "#51928b"
+		"text": "#316192",
+		"links": "#013162"
 	},
 	"fork": {
 		"enabled": true,
