@@ -1,44 +1,44 @@
 <?php
-	$content = file_get_contents("./static/configuration/configuration.json");
-	//$content = json_decode($content, true);
+	$configuration = file_get_contents("./static/configuration/configuration.json");
+	$configuration = json_decode($configuration, true);
 ?>
 {% load static from staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title><?=$content?> {{surname}}</title>
+		<title><?=$configuration['name']?> <?=$configuration['surname']?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta property="og:title" content="{{name}} {{surname}}"/>
-		<meta property="og:image" content="{{avatar}}"/>
-		<meta property="og:description" content="Personal profile page of {{name}} {{surname}}, {{role}}."/>
-		<meta property="og:url" content="{{baseurl}}" />
+		<meta property="og:title" content="<?=$configuration['name']?> <?=$configuration['surname']?>"/>
+		<meta property="og:image" content="<?=$configuration['avatar']['large']?>"/>
+		<meta property="og:description" content="Personal profile page of <?=$configuration['name']?> <?=$configuration['surname']?>, <?=$configuration['role']?>."/>
+		<meta property="og:url" content="<?=$configuration['baseurl']?>" />
 		<link rel="stylesheet" href="{% static 'css/style.css' %}">
 		<script async src="{{dataurl}}" type="text/javascript"></script>
 		<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		{% if stats.enabled %}
+		<? if($configuration['stats']['enabled']) { ?>
 		<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		ga('create', '{{stats.analytics}}', 'auto');
+		ga('create', '<?=$configuration['stats']['analytics']?>', 'auto');
 		ga('send', 'pageview');
 		</script>
-		{% if stats.privacypolicy.enabled %}
+		<? if($configuration['stats']['privacypolicy']['enabled']) { ?>
 		<script async src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 		<script defer src="{% static 'js/jquery.cookiesdirective.js' %}"></script>
-		{% endif %}
-		{% endif %}
-		{% if social.enabled %}
+		<? } ?>
+		<? } ?>
+		<? if($configuration['social']['enabled']) { ?>
 		<script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
-		{% endif %}
+		<? } ?>
 		<style>
 		html {
-			background-color: {{colors.background}};
-			color: {{colors.text}};
+			background-color: {<?=$configuration['colors']['background']?>};
+			color: {<?=$configuration['colors']['text']?>};
 		}
 		a {
-			color: {{colors.links}};
+			color: {<?=$configuration['colors']['links']?>};
 		}
 		div#fork {
 			position: absolute;
@@ -48,12 +48,12 @@
 		img#fork {
 			max-width: 150px;
 		}
-		{% if stats.enabled and stats.privacypolicy.enabled %}
+		<? if($configuration['stats']['enabled'] && $configuration['stats']['privacypolicy']['enabled']) { ?>
 		a.privacypolicy {
-			color: {{stats.privacypolicy.linkcolor}};
+			color: {<?=$configuration['stats']['privacypolicy']['linkcolor']?>};
 		}
-		{% endif %}
-		{% if social.enabled %}
+		<? } ?>
+		<? if($configuration['social']['enabled']) { ?>
 		.social-icons {
 			font-size: 20px;
 		}
@@ -64,53 +64,53 @@
 		a.social {
 			display: inline;
 		}
-		{% endif %}
+		<? } ?>
 		</style>
 	</head>
 	<body>
-		{% if fork.enabled %}
+		<? if($configuration['fork']['enabled']) { ?>
 		<div id="fork">
-			<a href="{{fork.url}}"><img id="fork" src="{% static 'img/fork-large.png' %}" srcset="{% static 'img/fork-small.png' %} 480w, {% static 'img/fork-large.png' %} 1080w" sizes="50vw" alt="{{fork.text}}"/></a>
+			<a href="<?=$configuration['fork']['url']?>"><img id="fork" src="{% static 'img/fork-large.png' %}" srcset="{% static 'img/fork-small.png' %} 480w, {% static 'img/fork-large.png' %} 1080w" sizes="50vw" alt="<?=$configuration['fork']['text']?>"/></a>
 		</div>
-		{% endif %}
+		<? } ?>
 		<div class="person animated bounceInDown" itemscope itemtype="http://schema.org/Person">
 			<div class="avatar">
-				<img itemprop="image" src="{{avatar.large}}" srcset="{{avatar.small}} 480w, {{avatar.large}} 1080w" sizes="50vw" alt="Avatar of {{name}} {{surname}}"/>
+				<img itemprop="image" src="<?=$configuration['avatar']['large']?>" srcset="<?=$configuration['avatar']['small']?> 480w, <?=$configuration['avatar']['large']?> 1080w" sizes="50vw" alt="Avatar of <?=$configuration['name']?> <?=$configuration['surname']?>"/>
 			</div>
 			<div class="content">
-				<h1 class="title" itemprop="name">{{name}}<br/>{{surname}}</h1>
-				{% if role %}
+				<h1 class="title" itemprop="name"><?=$configuration['name']?><br/><?=$configuration['surname']?></h1>
+				<? if($configuration['role']) { ?>
 				<p itemprop="jobTitle">
-					{{role}}
+					<?=$configuration['role']?>
 				</p>
-				{% endif %}
-				{% if social.enabled %}
+				<? } ?>
+				<? if($configuration['social']['enabled']) { ?>
 				<ul class="social-icons">
 					{% for link in social.data %}
 					<li><a class="social" href="{{link.url}}" title="{{link.name}}" {{target}}><i class="fab {{link.faicon}}"></i></a></li>
 					{% endfor %}
 				</ul>
-				{% endif %}
-				{% if links.enabled %}
+				<? } ?>
+				<? if($configuration['links']['enabled']) { ?>
 				<p>
-					{{links.title}}<br>
+					<?=$configuration['links']['title']) { ?><br>
 					{% for link in links.list %}
 					<a href="{{link.url}}">{{link.name}}</a><br>
 					{% endfor %}
 				</p>
-				{% endif %}
-				{% if email.address %}
+				<? } ?>
+				<? if($configuration['email']['address']) { ?>
 				<p>{{email.question}} <a href="mailto:{{email.address.name}}@{{email.address.domain}}{% if email.tag %}?subject=[{{email.tag}}]{% endif %}">Email me</a>.</p>
-				{% endif %}
+				<? } ?>
 			</div>
 		</div>
-		{% if stats.privacypolicy.enabled %}
+		<? if($configuration['stats']['privacypolicy']['enabled']) { ?>
 		<script defer type="text/javascript">
 		$(document).ready(function() {
 			$.cookiesDirective({
 				{% if stats.privacypolicy.link %}
 				privacyPolicyUri: '{{stats.privacypolicy.link}}',
-				{% endif %}
+				<? } ?>
 				message: 'This website makes use of Google Analytics to place cookies on your computer. By surfing the website, we\'ll assume that you accept to receive all cookies from this website.<br/>If you would like to change your preferences you may follow the <a class="privacypolicy" href="http://www.aboutcookies.org/Default.aspx?page=1" target="_new">relative instructions</a>.',
 				explicitConsent: true,
 				position : 'bottom',
@@ -121,6 +121,6 @@
 			});
 		});
 		</script>
-		{% endif %}
+		<? } ?>
 	</body>
 </html>
