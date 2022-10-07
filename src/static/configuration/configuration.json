@@ -33,36 +33,43 @@
 		"enabled": true,
 		"data": [
 			{
+				"enabled": true,
 				"faicon": "fa-github",
 				"name": "GitHub",
 				"url": "https://github.com/auino"
 			},
 			{
+				"enabled": true,
 				"faicon": "fa-linkedin",
 				"name": "LinkedIn",
 				"url": "https://linkedin.com/in/enricocambiaso"
 			},
 			{
+				"enabled": false,
 				"faicon": "fab fa-researchgate",
 				"name": "ResearchGate",
 				"url": "https://www.researchgate.net/profile/Enrico_Cambiaso"
 			},
 			{
+				"enabled": false,
 				"faicon": "fa-twitter-square",
 				"name": "Twitter",
 				"url": "https://twitter.com/auino"
 			},
 			{
+				"enabled": false,
 				"faicon": "fa-blogger",
 				"name": "Blogger",
 				"url": "http://enricocambiaso.blogspot.com"
 			},
 			{
+				"enabled": false,
 				"faicon": "fa-500px",
 				"name": "500px",
 				"url": "http://500px.com/auino"
 			},
 			{
+				"enabled": false,
 				"faicon": "fa-instagram",
 				"name": "Instagram",
 				"url": "https://www.instagram.com/enrico.cambiaso/"

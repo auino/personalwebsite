@@ -86,16 +86,18 @@
 				<? if($configuration['social']['enabled']) { ?>
 				<ul class="social-icons">
 					<? foreach($configuration['social']['data'] as $link) { ?>
+					<? if($link['enabled']) { ?>
 					<li><a class="social" href="<?=$link['url']?>" title="<?=$link['name']?>" target="<?=$link['target']?>"><i class="fab <?=$link['faicon']?>"></i></a></li>
+					<? } ?>
 					<? } ?>
 				</ul>
 				<? } ?>
 				<? if($configuration['links']['enabled']) { ?>
 				<p>
 					<?=$configuration['links']['title']?><br>
-					{% for link in links.list %}
-					<a href="{{link.url}}">{{link.name}}</a><br>
-					{% endfor %}
+					<? foreach($configuration['links']['list'] as $link) { ?>
+					<a href="<?=$link['url']?>"><?=$link['name']?></a><br>
+					<? } ?>
 				</p>
 				<? } ?>
 				<? if($configuration['email']['address']) { ?>
