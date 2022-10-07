@@ -2,7 +2,7 @@
 	"name": "Enrico",
 	"surname": "Cambiaso",
 	"baseurl": "http://www.auino.com",
-	"role": "Ph.D. in computer science",
+	"role": "Ph.D in computer science",
 	"avatar": {
 		"large": "/static/configuration/img/avatar-large.jpg",
 		"small": "/static/configuration/img/avatar-small.jpg"
