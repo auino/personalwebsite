@@ -52,9 +52,9 @@
 			},
 			{
 				"enabled": false,
-				"faicon": "fa-twitter-square",
-				"name": "Twitter",
-				"url": "https://twitter.com/auino"
+				"faicon": "fa-square-x-twitter",
+				"name": "X",
+				"url": "https://x.com/auino"
 			},
 			{
 				"enabled": false,
