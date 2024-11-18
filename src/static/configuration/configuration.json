@@ -57,6 +57,12 @@
 				"url": "https://x.com/auino"
 			},
 			{
+				"enabled": true,
+				"faicon": "fa-square-bluesky",
+				"name": "Bluesky",
+				"url": "https://bsky.app/profile/auino.bsky.social"
+			},
+			{
 				"enabled": false,
 				"faicon": "fa-blogger",
 				"name": "Blogger",
